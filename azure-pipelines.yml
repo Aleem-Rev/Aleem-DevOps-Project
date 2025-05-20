@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: Default
+  name: 'AleemSelfHostedAgent'
 
 steps:
 - task: DockerInstaller@0
@@ -12,5 +12,5 @@ steps:
     containerRegistry: 'DockerHubConnection'
     repository: 'muhammadaleem/aleem-sample-app'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: 'node-js-sample/Dockerfile'
     tags: 'latest'
